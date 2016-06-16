@@ -4,10 +4,12 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"runtime"
 )
 
 func handleRequest(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello World")
+	fmt.Fprintf(w, "Hello World. Running: ")
+	fmt.Fprintf(w, runtime.Version())
 }
 
 func main() {
