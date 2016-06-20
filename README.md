@@ -1,9 +1,9 @@
 
 Golang
 
-- How to write Go code: https://golang.org/doc/code.html
-- Installing Go tools: https://golang.org/doc/install
-- Go and JSON: https://eager.io/blog/go-and-json/
+- [How to write Go code](https://golang.org/doc/code.html)
+- [Installing Go tools](https://golang.org/doc/install)
+- [Go and JSON](https://eager.io/blog/go-and-json/)
 
 Elastic Beanstalk
 
@@ -13,7 +13,8 @@ Elastic Beanstalk
 - [Using Elastic Beanstalk with RDS](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.RDS.html)
 - [Instance Metrics](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced-metrics.html)
 
-Docker
+Docker Engine
 
-- https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
+- [install Docker Engine on Linux](https://docs.docker.com/engine/installation/)
+- [Docker on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
 
