@@ -4,7 +4,7 @@
 // Usage:
 // Start server: go run application.go
 // Client: curl 127.0.0.1:5000?id=2
-// {"id":2,"ObfuscatedId":"Ppe3M9"}
+// {"id":2,"obfuscated_id":"Ppe3M9"}
 
 package main
 
@@ -17,8 +17,8 @@ import (
 )
 
 type Response struct {
-	Id           int `json:"id"`
-	ObfuscatedId string
+	Id           int    `json:"id"`
+	ObfuscatedId string `json:"obfuscated_id"`
 }
 
 func getHashId(id int) (string, error) {
