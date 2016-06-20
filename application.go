@@ -4,17 +4,22 @@
 // Usage:
 // Start server: go run application.go
 // Client: curl 127.0.0.1:5000?id=2
-// Vj7ygQ
+// {"id":2,"ObfuscatedId":"Ppe3M9"}
 
 package main
 
 import (
-	"fmt"
+	"encoding/json"
 	"github.com/speps/go-hashids"
 	"math/rand"
 	"net/http"
 	"strconv"
 )
+
+type Response struct {
+	Id           int `json:"id"`
+	ObfuscatedId string
+}
 
 func getHashId(id int) (string, error) {
 	hd := hashids.NewData()
@@ -33,7 +38,9 @@ func handleRequest(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			http.Error(w, "Error generating Id", 500)
 		} else {
-			fmt.Fprintf(w, generatedId)
+			r := Response{Id: id, ObfuscatedId: generatedId}
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode(r)
 		}
 	}
 }
